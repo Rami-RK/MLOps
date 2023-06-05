@@ -27,8 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r text_requirements.txt
-        working-directory: ./project_with_test/requirements
+        pip install -r ./project_with_test/requirements/text_requirements.txt
     - name: test with pytest 
       run: |
         pytest
