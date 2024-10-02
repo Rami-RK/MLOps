@@ -1,13 +1,8 @@
-import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).parent.parent))
-
 import pytest
 from sklearn.model_selection import train_test_split
 
 from titanic_model.config.core import config
 from titanic_model.processing.data_manager import _load_raw_dataset
-
 
 
 @pytest.fixture

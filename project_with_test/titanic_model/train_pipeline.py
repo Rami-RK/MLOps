@@ -1,7 +1,3 @@
-import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).parent.parent))
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -31,8 +27,8 @@ def run_training() -> None:
 
     # Pipeline fitting
     titanic_pipe.fit(X_train,y_train)  #
-    #y_pred = titanic_pipe.predict(X_test)
-    #print("Accuracy(in %):", accuracy_score(y_test, y_pred)*100)
+    y_pred = titanic_pipe.predict(X_test)
+    print("Accuracy(in %):", accuracy_score(y_test, y_pred)*100)
 
     # persist trained model
     save_pipeline(pipeline_to_persist= titanic_pipe)

@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Dict, List
 from pydantic import BaseModel
 from strictyaml import YAML, load
-sys.path.append(str(Path(__file__).parent.parent.parent))
+#sys.path.append(str(Path(__file__).parent.parent.parent))
 
 import titanic_model
 

@@ -1,10 +1,7 @@
-import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).parent.parent))
 
-from typing import Union
 import pandas as pd
 import numpy as np
+from typing import Union
 
 from titanic_model import __version__ as _version
 from titanic_model.config.core import config
@@ -40,9 +37,9 @@ def make_prediction(*,input_data:Union[pd.DataFrame, dict]) -> dict:
 
     return results
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
 
-#    data_in={'PassengerId':[79],'Pclass':[2],'Name':["Caldwell, Master. Alden Gates"],'Sex':['male'],'Age':[0.83],
-#                'SibSp':[0],'Parch':[2],'Ticket':['248738'],'Cabin':[np.nan,],'Embarked':['S'],'Fare':[29]}
+    data_in={'PassengerId':[79],'Pclass':[2],'Name':["Caldwell, Master. Alden Gates"],'Sex':['male'],'Age':[0.83],
+                'SibSp':[0],'Parch':[2],'Ticket':['248738'],'Cabin':[np.nan,],'Embarked':['S'],'Fare':[29]}
     
-#    make_prediction(input_data=data_in)
+    make_prediction(input_data=data_in)

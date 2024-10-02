@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+file = Path(__file__).resolve()
+parent, root = file.parent, file.parents[1]
+sys.path.append(str(root))
+
 from typing import List, Optional, Tuple, Union
 
 import numpy as np
@@ -30,15 +36,15 @@ class DataInputSchema(BaseModel):
     PassengerId:Optional[int]
     Pclass: Optional[int]
     Name: Optional[str]
-    sex: Optional[str]
+    Sex: Optional[str]
     Age: Optional[float]
-    Sibsp: Optional[int]
+    SibSp: Optional[int]
     Parch: Optional[int]
     Ticket: Optional[str]
-    fare: Optional[float]
+    Fare: Optional[float]
     Cabin: Optional[Union[str, float]]
     Embarked: Optional[str]
-    Fare: Optional[int]
+    #Fare: Optional[int]
 
 
 class MultipleDataInputs(BaseModel):

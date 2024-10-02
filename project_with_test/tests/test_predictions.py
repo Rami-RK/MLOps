@@ -1,10 +1,6 @@
 """
 Note: These tests will fail if you have not first trained the model.
 """
-import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).parent.parent))
-
 import numpy as np
 from sklearn.metrics import accuracy_score
 

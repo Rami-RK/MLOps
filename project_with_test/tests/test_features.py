@@ -3,10 +3,6 @@
 Note: These tests will fail if you have not first trained the model.
 """
 
-import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).parent.parent))
-
 import numpy as np
 from titanic_model.config.core import config
 from titanic_model.processing.features import age_col_tfr
