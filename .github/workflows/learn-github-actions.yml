@@ -82,7 +82,7 @@ jobs:
     - name: Repo Checkout
       uses: actions/checkout@v2
 
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v3
       with:
         name: my-build-package
         path: titanic_model_api
