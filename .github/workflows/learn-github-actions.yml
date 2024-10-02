@@ -45,6 +45,8 @@ jobs:
         path: titanic_model/trained_models
     - name: Install dependencies
       run: pip install -r requirements/test_requirements.txt
+    - name: Install root folder as package for smooth imports
+      run:  pip install -e .
     - name: Test with pytest
       run: pytest
 
